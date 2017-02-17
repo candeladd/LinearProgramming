@@ -1,0 +1,39 @@
+intcon = [1 2 3 4 5 6 7 8 9 10];
+A = [-1 0 -1 0 0 -1 0 0 0 0;
+     0 -1 0 0 0 0 -1 -1 0 0;
+     -1 0 0 0 0 0 0 -1 -1 0;
+     -1 0 -1 0 -1 -1 0 0 0 0];
+
+f = [1; 2; 3; 4; 5; 6; 7; 8; 9; 10];
+b [-1; -1; -1; -1];
+ub= [1 1 1 1 1 1 1 1 1 1];
+lb = [0 0 0 0 0 0 0 0 0 0];
+
+>> [x, obj_val] = intlinprog(f,intcon,A,b,[],[],lb,ub)
+LP:                Optimal objective value is 3.000000.                                             
+
+
+Optimal solution found.
+
+Intlinprog stopped at the root node because the objective value is within a gap tolerance of the
+optimal value, options.AbsoluteGapTolerance = 0 (the default value). The intcon variables are
+integer within tolerance, options.IntegerTolerance = 1e-05 (the default value).
+
+
+x =
+
+     1
+     1
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+     0
+
+
+obj_val =
+
+     3
